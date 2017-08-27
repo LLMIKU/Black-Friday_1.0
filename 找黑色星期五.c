@@ -6,10 +6,10 @@ void main()
 	int nian,yue,ri;
 	int n=0;
 	int h,g,t;
-	printf("����������Ҫ���ҵ�ĳ������֮ǰ�ĺ�ɫ�����壬�����ʽΪ�� �� ��:\n"); 
-	printf("(ע��:���ҵ������ھ��ǹ�Ԫ������ڣ���Ԫǰ������������)\n");
-    printf("ףʹ����죡^_^\n"); 
-    printf("�����밴��ʽ����:\n");
+	printf("请输入你想要查找的某个日期之前的黑色星期五，输入格式为年 月 日:\n"); 
+	printf("(注意:查找到的日期均是公元后的日期，公元前并不包括在内)\n");
+    	printf("祝使用愉快！^_^\n"); 
+    	printf("现在请按格式输入:\n");
 	scanf("%d%d%d",&nian,&yue,&ri);
 	for(y=1;y<=nian;y++)
 	{	if(y%4==0&&y%100!=0||y%400==0) of=1;
@@ -28,11 +28,10 @@ void main()
 			for(d=1;d<=28+g-t;d++)
 			{
 			n++;
-			if(d==13&&n%7==5) printf("��%d��,%d,%d,%d����%d\n",n,y,m,d,n%7);	
+			if(d==13&&n%7==5) printf("第%d天,%d,%d,%d，周%d\n",n,y,m,d,n%7);	
 			}	
 		}
 	}
-	printf("���ϼ�Ϊ���ҵ������еĺ�ɫ������\n");
-	system("pause");
-
+	printf("以上即为查找到的所有的黑色星期五\n");
+	system("pause");	
 }
